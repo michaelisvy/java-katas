@@ -6,7 +6,7 @@ public class ScoreOperations {
     public static final int ADVANTAGE = 4;
 
     public static void addPoint(Score winner, Score loser) {
-        if(winnerOnePointFromWinningGame(winner, loser)) { // FORTY and no deuce
+        if(winnerIsOnePointFromWinningGame(winner, loser)) { // FORTY and no deuce
             incrementGameAndSet(winner, loser);
         } else if (advantage(loser)) {
             deuce(winner, loser);
@@ -36,7 +36,7 @@ public class ScoreOperations {
         loser.resetPoints();
     }
 
-    private static boolean winnerOnePointFromWinningGame(Score winner, Score loser) {
+    private static boolean winnerIsOnePointFromWinningGame(Score winner, Score loser) {
         if (winnerIsLeadingGame(winner, loser) && fortyOrAdvantage(winner)) {
             return true;
         }

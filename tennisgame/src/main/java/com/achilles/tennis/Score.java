@@ -4,18 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Score {
-    private static Map<Integer, PointValue> scores = new HashMap<Integer, PointValue>();
 
     private int setsValue;
     private int gamesValue;
     private int pointsValue;
-
-    static {
-        scores.put(0, PointValue.LOVE);
-        scores.put(1, PointValue.FIFTEEN);
-        scores.put(2, PointValue.THIRTY);
-        scores.put(3, PointValue.FORTY);
-    }
 
     public Score() {
     }
@@ -72,14 +64,6 @@ public class Score {
             return true;
         } else {
             return false;
-        }
-    }
-
-    public PointValue getPointsTennisFormat() {
-        if (this.pointsValue <= 3) {
-            return scores.get(this.pointsValue);
-        } else {
-            return PointValue.ADVANTAGE;
         }
     }
 }
