@@ -1,8 +1,5 @@
 package com.achilles.tennis;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Score {
 
     private int setsValue;

@@ -1,11 +1,11 @@
-package com.achilles.tennis;
+package com.achilles.tennis.formatter;
 
+import com.achilles.tennis.Score;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class ScoreFormatterTest {
-    private ScoreFormatter scoreFormatter = new ScoreFormatter();
+    private ScoreFormatter scoreFormatter = new ScoreLongFormatter();
 
     @Test
     public void testDeuce() {

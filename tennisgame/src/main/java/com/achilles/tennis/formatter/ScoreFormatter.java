@@ -1,22 +1,22 @@
-package com.achilles.tennis;
+package com.achilles.tennis.formatter;
+
+import com.achilles.tennis.Score;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ScoreFormatter {
+@Component
+public abstract class ScoreFormatter {
 
     public ScoreFormatter() {
+        initialiseScores();
     }
 
     public static final String DEUCE = "deuce";
-    private static Map<Integer, String> scores = new HashMap<>();
+    Map<Integer, String> scores = new HashMap<>();
 
-    static {
-        scores.put(0, "love");
-        scores.put(1, "fifteen");
-        scores.put(2, "thirty");
-        scores.put(3, "forty");
-    }
+    abstract void initialiseScores();
 
 
 

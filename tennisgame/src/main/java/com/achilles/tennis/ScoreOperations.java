@@ -2,8 +2,8 @@ package com.achilles.tennis;
 
 public class ScoreOperations {
 
-    public static final int FORTY = 3;
-    public static final int ADVANTAGE = 4;
+    private static final int FORTY = 3;
+    private static final int ADVANTAGE = 4;
 
     public static void addPoint(Score winner, Score loser) {
         if(winnerIsOnePointFromWinningGame(winner, loser)) { // FORTY and no deuce
